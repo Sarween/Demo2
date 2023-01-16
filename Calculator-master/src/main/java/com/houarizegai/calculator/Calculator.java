@@ -10,6 +10,8 @@ import java.awt.Color;
 import javax.swing.*;
 import java.lang.Math;
 
+private static final String fontStyle = "Comic Sans MS";
+
 public class Calculator {
 
     private static final int WINDOW_WIDTH = 410;
@@ -79,7 +81,7 @@ public class Calculator {
         inText.setBounds(x[0], y[0], 350, 70);
         inText.setEditable(false);
         inText.setBackground(Color.WHITE);
-        inText.setFont(new Font("Comic Sans MS", Font.PLAIN, 33));
+        inText.setFont(new Font(fontStyle, Font.PLAIN, 33));
         window.add(inText);
 
         btnC = initBtn("C", x[0], y[1], event -> {
@@ -402,7 +404,7 @@ public class Calculator {
                     opt = '^';
                 }
         });
-        btnPower.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
+        btnPower.setFont(new Font(fontStyle, Font.PLAIN, 24));
         btnPower.setVisible(false);
 
         btnLog = initBtn("ln", x[4], y[3], event -> {
@@ -440,7 +442,7 @@ public class Calculator {
     private JButton initBtn(String label, int x, int y, ActionListener event) {
         JButton btn = new JButton(label);
         btn.setBounds(x, y, BUTTON_WIDTH, BUTTON_HEIGHT);
-        btn.setFont(new Font("Comic Sans MS", Font.PLAIN, 28));
+        btn.setFont(new Font(fontStyle, Font.PLAIN, 28));
         btn.setCursor(new Cursor(Cursor.HAND_CURSOR));
         btn.addActionListener(event);
         btn.setFocusable(false);
